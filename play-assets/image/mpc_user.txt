@@ -1,0 +1,55 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: 14 Apr 2016 pada 11.09
+-- Versi Server: 5.6.17
+-- PHP Version: 5.5.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `mpc_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `p-in_user`
+--
+
+CREATE TABLE IF NOT EXISTS `p-in_user` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(250) NOT NULL,
+  `last_name` varchar(250) NOT NULL,
+  `username` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `phone_nmbr` varchar(20) NOT NULL,
+  `birth_date` date NOT NULL,
+  `join_date` datetime NOT NULL,
+  `login_date` datetime NOT NULL,
+  `logout_date` datetime NOT NULL,
+  `level` varchar(100) NOT NULL,
+  `active` set('Y','N') NOT NULL,
+  `activation_code` varchar(350) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data untuk tabel `p-in_user`
+--
+
+INSERT INTO `p-in_user` (`id`, `first_name`, `last_name`, `username`, `password`, `phone_nmbr`, `birth_date`, `join_date`, `login_date`, `logout_date`, `level`, `active`, `activation_code`) VALUES
+(1, 'Rayhan', 'Ahmad Rizalullah', 'rayhanahmadr', '7f3f4843df0d427b146b47a22f2e49aa', '085368233575', '2003-05-26', '2016-04-12 07:40:17', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Administrator', 'Y', NULL);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

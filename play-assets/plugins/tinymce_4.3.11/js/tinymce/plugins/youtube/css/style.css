@@ -1,0 +1,16 @@
+/*
+ *  Document    : main.css
+ *  Author      : pixelcave edited by popojicms
+ *  Modified by : PlayCMS
+ */
+#page-content {
+    padding: 10px 5px 1px;
+    min-height: 1200px;
+    background-color: #eaedf1;
+}
+#page-content+footer {
+    padding: 9px 10px;
+    font-size: 11px;
+    background-color: #fff;
+    border-top: 1px solid #dbe1e8;
+}
